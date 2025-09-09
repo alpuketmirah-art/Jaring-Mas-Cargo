@@ -1,21 +1,25 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Pengiriman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+      <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jaring Mas Cargo</title>
   <meta name="description" content="Jasa ekspor–impor terpadu: sea freight, air freight, customs/PPJK, warehouse, project cargo. Transparan, cepat, aman." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-   <link rel="shortcut icon" href="451567464_3917176071849469_4812362912033862970_n.jpg" type="x-icon">
+  <link rel="shortcut icon" href="jmc.jpg" type="x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
-          colors: { brand: { 900: '#0f172a' } }
+          colors: { brand: { 900: '#1225ab' } }
         }
       }
     }
@@ -28,25 +32,45 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-gradient-to-b from-white via-slate-50 to-white text-slate-800">
+  <style>
+  html { scroll-behavior: smooth; }
+  .glass { backdrop-filter: saturate(180%) blur(8px); }
+
+  /* Tambahan agar semua teks default jadi biru */
+  body {
+    color: #1225ab; /* biru brand */
+  }
+  /* Untuk override teks abu-abu dari Tailwind */
+  .text-slate-600,
+  .text-slate-700,
+  .text-slate-800,
+  .text-slate-900,
+  .text-slate-500 {
+    color: #1225ab !important;
+  }
+</style>
   <!-- Top Bar -->
-  <div class="w-full bg-slate-900 text-white text-xs md:text-sm">
-    <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap gap-2 md:gap-4 items-center justify-between">
-      <div class="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-4">
-        <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +62 881-1104-061</span>
-        <span class="hidden md:block h-4 w-px bg-white/20"></span>
-        <span class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> cargojaringmas@gmail.com</span>
-      </div>
-      <div class="flex items-center gap-2 opacity-90 text-xs md:text-sm">
-        <i data-lucide="globe-2" class="w-4 h-4"></i> Worldwide Service
-      </div>
+ <div class="w-full bg-blue-700 text-white text-xs md:text-sm">
+  <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap gap-2 md:gap-4 items-center justify-between">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-4">
+      <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +62 881-1104-061</span>
+      <span class="hidden md:block h-4 w-px bg-blue-300/40"></span>
+      <span class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> cargojaringmas@gmail.com</span>
     </div>
+<div class="flex items-center gap-2 opacity-90 text-xs md:text-sm">
+  <img src="https://www.mte.co.id/wp-content/uploads/2024/06/gif-gudang-putih.gif"
+       alt="Gudang"
+       class="w-20 h-10 object-contain">
+  <i data-lucide="globe-2" class="w-4 h-4"></i> Worldwide Service
+</div>
   </div>
+</div>
 
   <!-- Header -->
   <header class="sticky top-0 z-40 glass bg-white/70 border-b">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="451567464_3917176071849469_4812362912033862970_n.jpg" alt="Logo Jaringmas Cargo" class="h-10 w-auto" />
+        <img src="jmc.jpg" alt="Logo Jaringmas Cargo" class="h-10 w-auto" />
         <div class="font-semibold text-slate-900">Jaring Mas Cargo</div>
       </div>
       <!-- Desktop Nav -->
@@ -75,8 +99,179 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
+ <!-- Hero -->
+<section class="relative overflow-hidden">
+  <!-- Banner Slider -->
+  <section class="relative w-full">
+    <!-- Swiper -->
+    <div class="swiper mySwiper w-full h-[50vh] sm:h-[60vh] md:h-[516px]">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative">
+          <img src="melayani (1).jpg" alt="Banner 1" 
+               class="w-full h-full object-cover object-center">
+          <!-- Overlay konten -->
+          <div class="absolute inset-0 flex flex-col justify-center items-end pr-4 sm:pr-10 md:pr-20 text-right">
+            <div class="bg-black/40 p-4 sm:p-6 rounded-xl max-w-lg">
+              <h2 class="text-base sm:text-lg md:text-2xl font-semibold mb-2 text-white">
+                Kirim barang dari negara manapun
+              </h2>
+              <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-yellow-400 drop-shadow-lg">
+                BEBAS
+              </h1>
+              <p class="text-sm sm:text-base md:text-xl font-medium text-white">
+                Kami yang urus!
+              </p>
+              <a href="#kontak" class="mt-4 inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-4 sm:px-5 py-2 rounded-lg font-semibold transition">
+                Hubungi Kami
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+          <img src="tidak perlu import dalam jumlah banyak.jpg" alt="Banner 2" 
+               class="w-full h-full object-cover object-center">
+          <div class="absolute inset-0 flex flex-col justify-center items-end pr-4 sm:pr-10 md:pr-20 text-right">
+            <div class="bg-black/40 p-4 sm:p-6 rounded-xl max-w-lg">
+              <h2 class="text-base sm:text-lg md:text-2xl font-semibold mb-2 text-white">
+                Tidak Perlu Import Dalam Jumlah Banyak
+              </h2>
+              <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-yellow-400 drop-shadow-lg">
+                MUDAH
+              </h1>
+              <p class="text-sm sm:text-base md:text-xl font-medium text-white">
+                TANPA MINIMUM BIAYA
+              </p>
+              <a href="#layanan" class="mt-4 inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-4 sm:px-5 py-2 rounded-lg font-semibold transition">
+                Lihat Layanan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative">
+          <img src="jasa pembelian barang di china.jpg" alt="Banner 3" 
+               class="w-full h-full object-cover object-center">
+          <div class="absolute inset-0 flex flex-col justify-center items-end pr-4 sm:pr-10 md:pr-20 text-right">
+            <div class="bg-black/40 p-4 sm:p-6 rounded-xl max-w-lg">
+              <h2 class="text-base sm:text-lg md:text-2xl font-semibold mb-2 text-white">
+                Jasa Pembelian Barang Di China
+              </h2>
+              <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-yellow-400 drop-shadow-lg">
+                TERPERCAYA
+              </h1>
+              <p class="text-sm sm:text-base md:text-xl font-medium text-white">
+                TANPA MINIMUM BELANJA
+              </p>
+              <a href="#tentang" class="mt-4 inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-4 sm:px-5 py-2 rounded-lg font-semibold transition">
+                Tentang Kami
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation & Pagination -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+</section>
+
+<!-- SwiperJS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+  });
+</script>
+<body class="bg-gray-50">
+  <section class="mx-auto max-w-2xl px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">🚚 Tracking Pengiriman</h2>
+
+    <form id="tracking-form" class="flex gap-3 mb-6">
+      <input type="text" id="resi" placeholder="Masukkan nomor resi"
+        class="flex-1 rounded-xl border px-4 py-2 focus:ring-2 focus:ring-blue-700" required>
+      <select id="kurir" class="rounded-xl border px-3 py-2">
+        <option value="jne">JNE</option>
+        <option value="jnt">J&T</option>
+        <option value="pos">POS Indonesia</option>
+      </select>
+      <button type="submit"
+        class="rounded-xl bg-blue-700 hover:bg-blue-800 text-white px-6 py-2">Cek Resi</button>
+    </form>
+
+    <div id="tracking-result" class="hidden p-4 rounded-xl border bg-white shadow-md text-sm"></div>
+  </section>
+
+  <script>
+    document.getElementById("tracking-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const resi = document.getElementById("resi").value.trim();
+      const kurir = document.getElementById("kurir").value;
+      const resultEl = document.getElementById("tracking-result");
+
+      resultEl.classList.remove("hidden");
+      resultEl.innerHTML = "🔍 Sedang mencari data...";
+
+      try {
+        const response = await fetch(`/api/tracking`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ tracking_number: resi, carrier_code: kurir })
+        });
+
+        const data = await response.json();
+
+        if (data.data && data.data.items && data.data.items.length > 0) {
+          const info = data.data.items[0];
+          let historyHTML = "";
+          if (info.origin_info?.trackinfo) {
+            historyHTML = info.origin_info.trackinfo.map(item => `
+              <li class="mb-2">
+                <span class="font-semibold">${item.StatusDescription}</span><br>
+                <span class="text-gray-600 text-xs">${item.Details || ""}</span><br>
+                <span class="text-gray-500 text-xs">${item.Date}</span>
+              </li>
+            `).join("");
+          }
+
+          resultEl.innerHTML = `
+            <p><strong>Resi:</strong> ${resi}</p>
+            <p><strong>Status:</strong> ${info.status}</p>
+            <p><strong>Kurir:</strong> ${kurir.toUpperCase()}</p>
+            <h3 class="mt-4 font-bold">Riwayat Pengiriman:</h3>
+            <ul class="mt-2">${historyHTML || "<li>Belum ada riwayat.</li>"}</ul>
+          `;
+        } else {
+          resultEl.innerHTML = '<p class="text-red-600">❌ Resi tidak ditemukan.</p>';
+        }
+      } catch (err) {
+        resultEl.innerHTML = '<p class="text-red-600">⚠️ Gagal mengambil data tracking.</p>';
+      }
+    });
+  </script>
     <div class="mx-auto max-w-7xl px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
@@ -110,32 +305,32 @@
     <h2 class="text-2xl md:text-3xl font-bold">Layanan Kami</h2>
     <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="rounded-3xl shadow-sm hover:shadow-md border transition-all p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="ship" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="ship" class="w-5 h-5"></i></div>
         <div class="mt-4 font-semibold text-lg">Sea Freight FCL/LCL</div>
         <p class="text-slate-600 text-sm mt-1">Pengiriman laut global dengan opsi door-to-door dan konsolidasi LCL.</p>
       </div>
       <div class="rounded-3xl shadow-sm hover:shadow-md border transition-all p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="plane" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="plane" class="w-5 h-5"></i></div>
         <div class="mt-4 font-semibold text-lg">Air Freight & Express</div>
         <p class="text-slate-600 text-sm mt-1">Pengiriman udara prioritas, time-critical, dan charter khusus.</p>
       </div>
       <div class="rounded-3xl shadow-sm hover:shadow-md border transition-all p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="boxes" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="boxes" class="w-5 h-5"></i></div>
         <div class="mt-4 font-semibold text-lg">Project Cargo</div>
         <p class="text-slate-600 text-sm mt-1">Penanganan kargo besar/berat, breakbulk, crane & surveyor.</p>
       </div>
       <div class="rounded-3xl shadow-sm hover:shadow-md border transition-all p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="file-check-2" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="file-check-2" class="w-5 h-5"></i></div>
         <div class="mt-4 font-semibold text-lg">Customs & PPJK</div>
         <p class="text-slate-600 text-sm mt-1">Klarifikasi HS Code, perizinan, PIB/PEB, undername & compliance.</p>
       </div>
       <div class="rounded-3xl shadow-sm hover:shadow-md border transition-all p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="warehouse" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="warehouse" class="w-5 h-5"></i></div>
         <div class="mt-4 font-semibold text-lg">Warehouse & Distribution</div>
         <p class="text-slate-600 text-sm mt-1">Bonded/Non-bonded, cross-dock, 3PL, fulfillment e‑commerce.</p>
       </div>
       <div class="rounded-3xl shadow-sm hover:shadow-md border transition-all p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
         <div class="mt-4 font-semibold text-lg">Asuransi & Kepabeanan</div>
         <p class="text-slate-600 text-sm mt-1">Proteksi kargo & asistensi audit dokumen kepabeanan.</p>
       </div>
@@ -184,25 +379,25 @@
     <h2 class="text-2xl md:text-3xl font-bold">Alur Kerja Sederhana</h2>
     <div class="mt-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-6">
       <div class="rounded-3xl border p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5"></i></div>
         <div class="mt-4 text-sm text-slate-500">Langkah 1</div>
         <div class="font-semibold">Konsultasi</div>
         <p class="text-slate-600 text-sm mt-1">Cari Barang</p>
       </div>
       <div class="rounded-3xl border p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="dollar-sign" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="dollar-sign" class="w-5 h-5"></i></div>
         <div class="mt-4 text-sm text-slate-500">Langkah 2</div>
         <div class="font-semibold">Penawaran</div>
         <p class="text-slate-600 text-sm mt-1">Rute, harga, dan estimasi lead time yang transparan.</p>
       </div>
       <div class="rounded-3xl border p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="file-check-2" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="file-check-2" class="w-5 h-5"></i></div>
         <div class="mt-4 text-sm text-slate-500">Langkah 3</div>
         <div class="font-semibold">Dokumentasi</div>
         <p class="text-slate-600 text-sm mt-1">PIB/PEB, perizinan, packing list, invoice, COO/LS.</p>
       </div>
       <div class="rounded-3xl border p-6">
-        <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center"><i data-lucide="badge-check" class="w-5 h-5"></i></div>
+        <div class="h-10 w-10 rounded-2xl bg-blue-700 text-white flex items-center justify-center"><i data-lucide="badge-check" class="w-5 h-5"></i></div>
         <div class="mt-4 text-sm text-slate-500">Langkah 4</div>
         <div class="font-semibold">Eksekusi & Tracking</div>
         <p class="text-slate-600 text-sm mt-1">Pengiriman, kepabeanan, dan delivery hingga selesai.</p>
@@ -226,6 +421,9 @@
   </section>
 
   <!-- Sertifikasi / Compliance -->
+   <section id="sertifikasi" class="bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-14">
+      <h2 class="text-2xl md:text-3xl font-bold">Sertifikasi</h2>
   <section class="mx-auto max-w-7xl px-4 py-14">
     <div class="grid md:grid-cols-3 gap-6">
       <div class="rounded-3xl border border-dashed p-6 flex items-center gap-3 text-slate-700"><i data-lucide="shield-check" class="w-5 h-5"></i><div><div class="font-semibold">PPJK Berizin</div><div class="text-sm text-slate-500">Dokumen tersedia saat diminta.</div></div></div>
@@ -236,7 +434,7 @@
 
   <!-- CTA Banner -->
   <section class="mx-auto max-w-7xl px-4">
-    <div class="rounded-3xl bg-slate-900 text-white p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div class="rounded-3xl bg-blue-700 text-white p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
       <div>
         <div class="text-xl md:text-2xl font-semibold">Siap memperlancar ekspor–impor Anda?</div>
         <div class="text-white/80">Dapatkan estimasi biaya & timeline tanpa komitmen.</div>
@@ -339,5 +537,3 @@
   </script>
 </body>
 </html>
-
-
