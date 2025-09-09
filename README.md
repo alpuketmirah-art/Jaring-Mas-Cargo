@@ -1,2 +1,0 @@
-# Jaring-Mas-Cargo
-JMC
