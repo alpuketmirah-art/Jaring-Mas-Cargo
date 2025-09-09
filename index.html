@@ -7,129 +7,122 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white text-slate-800">
+<body class="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white text-gray-800">
 
   <!-- Top Bar -->
-  <div class="w-full bg-slate-900 text-white text-sm">
-    <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap items-center justify-between">
-      <!-- Mobile short version -->
+  <div class="w-full bg-slate-900 text-white text-xs md:text-sm">
+    <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+
+      <!-- Mobile: ikon saja -->
       <div class="flex items-center gap-4 md:hidden">
-        <a href="tel:+628811104061"><i data-lucide="phone" class="w-4 h-4"></i></a>
-        <a href="mailto:cargojaringmas@gmail.com"><i data-lucide="mail" class="w-4 h-4"></i></a>
+        <a href="tel:+628811104061" class="flex items-center gap-1">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+        </a>
+        <a href="mailto:cargojaringmas@gmail.com" class="flex items-center gap-1">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+        </a>
       </div>
-      <!-- Desktop full version -->
-      <div class="hidden md:flex items-center gap-4">
-        <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +62 881-1104-061 (Marketing JMC)</span>
-        <span class="h-4 w-px bg-white/20"></span>
-        <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +62 857-7277-2886 (Admin Pembelian)</span>
-        <span class="h-4 w-px bg-white/20"></span>
-        <span class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> cargojaringmas@gmail.com</span>
+
+      <!-- Desktop: detail lengkap -->
+      <div class="hidden md:flex flex-wrap items-center gap-x-6 gap-y-1">
+        <span class="flex items-center gap-1 whitespace-nowrap">
+          <i data-lucide="phone" class="w-4 h-4"></i> +62 881-1104-061 (Marketing JMC)
+        </span>
+        <span class="flex items-center gap-1 whitespace-nowrap">
+          <i data-lucide="phone" class="w-4 h-4"></i> +62 857-7277-2886 (Admin Pembelian)
+        </span>
+        <span class="flex items-center gap-1 max-w-[220px] truncate">
+          <i data-lucide="mail" class="w-4 h-4"></i> cargojaringmas@gmail.com
+        </span>
       </div>
-      <div class="flex items-center gap-2 opacity-90">
-        <i data-lucide="globe-2" class="w-4 h-4"></i> <span class="hidden sm:inline">Worldwide Service</span>
+
+      <!-- Service info -->
+      <div class="flex items-center gap-1">
+        <i data-lucide="globe-2" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">Worldwide Service</span>
       </div>
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- Nav -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="logo.jpg" alt="Logo Jaring Mas Cargo" class="h-10 w-auto max-h-10 object-contain" />
-        <div class="font-semibold text-slate-900">Jaring Mas Cargo</div>
+        <img src="https://via.placeholder.com/40x40" alt="Logo" class="h-9 w-9 rounded-full bg-white border" />
+        <div class="font-semibold text-gray-900">Jaring Mas Cargo</div>
       </div>
-
-      <!-- Menu desktop -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#layanan" class="hover:text-slate-900 text-slate-600">Layanan</a>
-        <a href="#kelebihan" class="hover:text-slate-900 text-slate-600">Keunggulan</a>
-        <a href="#proses" class="hover:text-slate-900 text-slate-600">Alur</a>
-        <a href="#sektor" class="hover:text-slate-900 text-slate-600">Sektor</a>
-        <a href="#kontak" class="hover:text-slate-900 text-slate-600">Kontak</a>
+        <a href="#layanan" class="hover:text-gray-900 text-gray-600">Layanan</a>
+        <a href="#kelebihan" class="hover:text-gray-900 text-gray-600">Keunggulan</a>
+        <a href="#proses" class="hover:text-gray-900 text-gray-600">Alur</a>
+        <a href="#sektor" class="hover:text-gray-900 text-gray-600">Sektor</a>
+        <a href="#kontak" class="hover:text-gray-900 text-gray-600">Kontak</a>
       </nav>
-
-      <!-- Tombol konsultasi desktop -->
-      <a href="#kontak" class="hidden md:inline px-4 py-2 bg-slate-900 text-white rounded-2xl">Konsultasi Gratis</a>
-
-      <!-- Menu mobile -->
-      <button id="menu-btn" class="md:hidden p-2 rounded-lg border">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
-    </div>
-
-    <!-- Dropdown mobile -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-      <nav class="flex flex-col p-4 gap-4 text-sm">
-        <a href="#layanan" class="hover:text-slate-900 text-slate-600">Layanan</a>
-        <a href="#kelebihan" class="hover:text-slate-900 text-slate-600">Keunggulan</a>
-        <a href="#proses" class="hover:text-slate-900 text-slate-600">Alur</a>
-        <a href="#sektor" class="hover:text-slate-900 text-slate-600">Sektor</a>
-        <a href="#kontak" class="hover:text-slate-900 text-slate-600">Kontak</a>
-        <a href="#kontak" class="px-4 py-2 bg-slate-900 text-white rounded-2xl text-center">Konsultasi Gratis</a>
-      </nav>
+      <a href="#kontak" class="px-4 py-2 bg-slate-900 text-white rounded-2xl">Konsultasi Gratis</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="mx-auto max-w-7xl px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <section class="mx-auto max-w-7xl px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
     <div>
       <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
-        Solusi <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600">Ekspor–Impor</span> End-to-End
+        Solusi <span class="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">Ekspor–Impor</span> End-to-End
       </h1>
-      <p class="mt-4 text-slate-600 text-lg">
+      <p class="mt-4 text-gray-600 text-lg">
         Urus kepabeanan, freight, dan distribusi tanpa pusing. Tim spesialis kami mengawal dokumen, biaya, dan timeline hingga barang tiba tepat waktu.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a href="#kontak" class="px-4 py-2 bg-slate-900 text-white rounded-2xl flex items-center gap-2">Mulai Konsultasi <i data-lucide="arrow-right"></i></a>
         <a href="#layanan" class="px-4 py-2 border rounded-2xl">Lihat Layanan</a>
       </div>
-      <div class="mt-6 flex flex-wrap gap-6 text-sm text-slate-600">
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-600">
         <span class="flex items-center gap-2"><i data-lucide="shield"></i> Berizin & Tersertifikasi</span>
         <span class="flex items-center gap-2"><i data-lucide="clock"></i> SLA Jelas</span>
-        <span class="flex items-center gap-2"><i data-lucide="check-circle-2"></i> 98% On-Time</span>
+        <span class="flex items-center gap-2"><i data-lucide="check-circle"></i> 98% On-Time</span>
       </div>
     </div>
     <div class="relative">
-      <div class="aspect-w-4 aspect-h-3 rounded-3xl bg-gradient-to-br from-slate-100 to-slate-200 p-1 shadow-lg">
+      <div class="aspect-w-4 aspect-h-3 rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 p-1 shadow-lg">
         <div class="h-full w-full rounded-2xl bg-white p-6 flex items-center justify-center">
-          <p class="text-slate-700">Ilustrasi Layanan Freight & Customs</p>
+          <p class="text-gray-700 text-center">Ilustrasi Layanan Freight & Customs</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Layanan -->
-  <section id="layanan" class="mx-auto max-w-7xl px-4 py-12">
+  <section id="layanan" class="mx-auto max-w-7xl px-4 py-14">
     <h2 class="text-2xl md:text-3xl font-bold text-center">Layanan Kami</h2>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="p-6 bg-white shadow rounded-2xl">
+      <div class="p-6 border rounded-2xl shadow bg-white">
         <h3 class="font-semibold text-lg">Sea Freight (FCL/LCL)</h3>
-        <p class="mt-2 text-slate-600 text-sm">Rute global, kontrak carrier, harga efisien.</p>
+        <p class="text-gray-600 mt-2">Rute global, kontrak carrier, harga kompetitif.</p>
       </div>
-      <div class="p-6 bg-white shadow rounded-2xl">
+      <div class="p-6 border rounded-2xl shadow bg-white">
         <h3 class="font-semibold text-lg">Dokumen Kepabeanan</h3>
-        <p class="mt-2 text-slate-600 text-sm">PIB/PEB, HS Code, COO, Lartas.</p>
+        <p class="text-gray-600 mt-2">PIB/PEB, HS Code, COO, Lartas.</p>
       </div>
-      <div class="p-6 bg-white shadow rounded-2xl">
+      <div class="p-6 border rounded-2xl shadow bg-white">
         <h3 class="font-semibold text-lg">Warehouse & Distribusi</h3>
-        <p class="mt-2 text-slate-600 text-sm">Gudang strategis & armada distribusi.</p>
+        <p class="text-gray-600 mt-2">Gudang modern & distribusi efisien.</p>
       </div>
     </div>
   </section>
 
   <!-- Kontak -->
-  <section id="kontak" class="mx-auto max-w-7xl px-4 py-12">
+  <section id="kontak" class="mx-auto max-w-7xl px-4 py-14">
     <div class="grid lg:grid-cols-2 gap-8">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold">Hubungi Kami</h2>
-        <p class="mt-2 text-slate-600">Isi formulir berikut, atau hubungi kami via WhatsApp/Email.</p>
-        <div class="mt-6 space-y-3 text-slate-700">
+        <p class="mt-2 text-gray-600">Isi formulir berikut, atau hubungi kami melalui WhatsApp/Email. Kami siap membantu.</p>
+        <div class="mt-6 space-y-3 text-gray-700">
           <div class="flex items-center gap-3"><i data-lucide="phone"></i> +62 881-1104-061</div>
+          <div class="flex items-center gap-3"><i data-lucide="phone"></i> +62 857-7277-2886</div>
           <div class="flex items-center gap-3"><i data-lucide="mail"></i> cargojaringmas@gmail.com</div>
-          <div class="flex items-center gap-3"><i data-lucide="map-pin"></i> Jl. Pelabuhan No. 12, Jakarta Utara</div>
+          <div class="flex items-center gap-3"><i data-lucide="map-pin"></i> Jl. Pelabuhan No. 12, Jakarta Utara 14440</div>
         </div>
       </div>
-      <form id="contact-form" class="space-y-4 bg-white shadow rounded-2xl p-6">
+      <form class="space-y-4 bg-white shadow rounded-2xl p-6">
         <div>
           <label class="text-sm">Nama</label>
           <input type="text" required placeholder="Nama lengkap" class="w-full border rounded-2xl px-3 py-2 mt-1" />
@@ -148,7 +141,7 @@
           <label class="text-sm">Pesan</label>
           <textarea rows="5" required placeholder="Ceritakan kebutuhan Anda..." class="w-full border rounded-2xl px-3 py-2 mt-1"></textarea>
         </div>
-        <button type="submit" class="px-4 py-2 bg-slate-900 text-white rounded-2xl">Kirim</button>
+        <button type="submit" class="px-4 py-2 bg-slate-900 text-white rounded-2xl">Kirim Permintaan Penawaran</button>
       </form>
     </div>
   </section>
@@ -158,11 +151,11 @@
     <div class="mx-auto max-w-7xl px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
       <div>
         <div class="font-semibold">Jaring Mas Cargo</div>
-        <p class="text-slate-600 mt-2">Mitra logistik ujung ke ujung untuk ekspor–impor bisnis Anda.</p>
+        <p class="text-gray-600 mt-2">Mitra logistik ujung ke ujung untuk ekspor–impor bisnis Anda.</p>
       </div>
       <div>
         <div class="font-semibold">Layanan</div>
-        <ul class="mt-2 space-y-1 text-slate-600">
+        <ul class="mt-2 space-y-1 text-gray-600">
           <li>Sea & Air Freight</li>
           <li>Customs & PPJK</li>
           <li>Project Cargo</li>
@@ -171,7 +164,7 @@
       </div>
       <div>
         <div class="font-semibold">Perusahaan</div>
-        <ul class="mt-2 space-y-1 text-slate-600">
+        <ul class="mt-2 space-y-1 text-gray-600">
           <li>Tentang Kami</li>
           <li>Karier</li>
           <li>Kebijakan Privasi</li>
@@ -180,22 +173,19 @@
       </div>
       <div>
         <div class="font-semibold">Kontak</div>
-        <ul class="mt-2 space-y-1 text-slate-600">
+        <ul class="mt-2 space-y-1 text-gray-600">
           <li class="flex gap-2 items-center"><i data-lucide="phone"></i> +62 881-1104-061</li>
+          <li class="flex gap-2 items-center"><i data-lucide="phone"></i> +62 857-7277-2886</li>
           <li class="flex gap-2 items-center"><i data-lucide="mail"></i> cargojaringmas@gmail.com</li>
-          <li class="flex gap-2 items-center"><i data-lucide="map-pin"></i> Jl. Pelabuhan No. 12, Jakarta Utara</li>
+          <li class="flex gap-2 items-center"><i data-lucide="map-pin"></i> Jl. Pelabuhan No. 12, Jakarta Utara 14440</li>
         </ul>
       </div>
     </div>
-    <div class="text-center text-xs text-slate-500 pb-8">© <script>document.write(new Date().getFullYear())</script> Jaring Mas Cargo. All rights reserved.</div>
+    <div class="text-center text-xs text-gray-500 pb-8">© <script>document.write(new Date().getFullYear())</script> Jaring Mas Cargo. All rights reserved.</div>
   </footer>
 
   <script>
     lucide.createIcons();
-    // Navbar mobile
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
   </script>
 </body>
 </html>
