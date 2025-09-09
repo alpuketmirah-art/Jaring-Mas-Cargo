@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": process.env.TRACKINGMORE_API_KEY, // API Key dari .env
+        "Tracking-Api-Key": process.env.TRACKINGMORE_API_KEY
       },
       body: JSON.stringify({ tracking_number, carrier_code })
     });
