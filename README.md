@@ -11,7 +11,7 @@ Aplikasi sederhana untuk tracking resi ekspedisi menggunakan **TrackingMore API*
 
 ### 1. Clone Repo
 ```bash
-git clone https://github.com/username/trackingmore-app.git
+git clone [https://github.com/username/trackingmore-app.git](https://alpuketmirah-art.github.io/Jaring-Mas-Cargo/)
 cd trackingmore-app
 ```
 
