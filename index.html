@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tracking Pengiriman</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracking Resi - TrackingMore</title>
   <script src="https://cdn.tailwindcss.com"></script>
       <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="jmc.jpg" type="x-icon">
+  <link rel="shortcut icon" href="gambar/jmc.jpg" type="x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -70,7 +70,7 @@
   <header class="sticky top-0 z-40 glass bg-white/70 border-b">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="jmc.jpg" alt="Logo Jaringmas Cargo" class="h-10 w-auto" />
+        <img src="gambar/jmc.jpg" alt="Logo Jaringmas Cargo" class="h-10 w-auto" />
         <div class="font-semibold text-slate-900">Jaring Mas Cargo</div>
       </div>
       <!-- Desktop Nav -->
@@ -108,7 +108,7 @@
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide relative">
-          <img src="melayani (1).jpg" alt="Banner 1" 
+          <img src="gambar/melayani (1).jpg" alt="Banner 1" 
                class="w-full h-full object-cover object-center">
           <!-- Overlay konten -->
           <div class="absolute inset-0 flex flex-col justify-center items-end pr-4 sm:pr-10 md:pr-20 text-right">
@@ -131,7 +131,7 @@
 
         <!-- Slide 2 -->
         <div class="swiper-slide relative">
-          <img src="tidak perlu import dalam jumlah banyak.jpg" alt="Banner 2" 
+          <img src="gambar/tidak perlu import dalam jumlah banyak.jpg" alt="Banner 2" 
                class="w-full h-full object-cover object-center">
           <div class="absolute inset-0 flex flex-col justify-center items-end pr-4 sm:pr-10 md:pr-20 text-right">
             <div class="bg-black/40 p-4 sm:p-6 rounded-xl max-w-lg">
@@ -153,7 +153,7 @@
 
         <!-- Slide 3 -->
         <div class="swiper-slide relative">
-          <img src="jasa pembelian barang di china.jpg" alt="Banner 3" 
+          <img src="gambar/jasa pembelian barang di china.jpg" alt="Banner 3" 
                class="w-full h-full object-cover object-center">
           <div class="absolute inset-0 flex flex-col justify-center items-end pr-4 sm:pr-10 md:pr-20 text-right">
             <div class="bg-black/40 p-4 sm:p-6 rounded-xl max-w-lg">
@@ -205,9 +205,11 @@
     loop: true,
   });
 </script>
-<body class="bg-gray-50">
-  <section class="mx-auto max-w-2xl px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">🚚 Tracking Pengiriman</h2>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="w-full max-w-lg bg-white p-6 rounded-xl shadow-lg">
+    <h1 class="text-2xl font-bold mb-4 text-center text-blue-600">
+      🚚 Tracking Resi
+    </h1>
 
     <!-- Input -->
     <form id="trackingForm" class="space-y-4">
@@ -575,4 +577,3 @@
   </script>
 </body>
 </html>
-
