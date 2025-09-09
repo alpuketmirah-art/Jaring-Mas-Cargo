@@ -209,66 +209,104 @@
   <section class="mx-auto max-w-2xl px-4 py-14">
     <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">🚚 Tracking Pengiriman</h2>
 
-    <form id="tracking-form" class="flex gap-3 mb-6">
-      <input type="text" id="resi" placeholder="Masukkan nomor resi"
-        class="flex-1 rounded-xl border px-4 py-2 focus:ring-2 focus:ring-blue-700" required>
-      <select id="kurir" class="rounded-xl border px-3 py-2">
-        <option value="jne">JNE</option>
-        <option value="jnt">J&T</option>
-        <option value="pos">POS Indonesia</option>
-      </select>
-      <button type="submit"
-        class="rounded-xl bg-blue-700 hover:bg-blue-800 text-white px-6 py-2">Cek Resi</button>
+    <!-- Input -->
+    <form id="trackingForm" class="space-y-4">
+      <div>
+        <label class="block font-semibold">Nomor Resi:</label>
+        <input
+          type="text"
+          id="resi"
+          placeholder="Masukkan nomor resi"
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+      </div>
+
+      <div>
+        <label class="block font-semibold">Kurir:</label>
+        <select
+          id="carrier"
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+          <option value="jne">JNE</option>
+          <option value="jnt">J&T</option>
+          <option value="pos">POS Indonesia</option>
+          <option value="sicepat">SiCepat</option>
+          <option value="tiki">TIKI</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition"
+      >
+        Lacak Resi
+      </button>
     </form>
 
-    <div id="tracking-result" class="hidden p-4 rounded-xl border bg-white shadow-md text-sm"></div>
-  </section>
+    <!-- Hasil -->
+    <div id="result" class="mt-6 p-4 bg-gray-50 border rounded-lg text-sm hidden">
+      <h2 class="font-bold text-lg mb-2">Hasil Tracking:</h2>
+      <div id="trackingData" class="space-y-2 text-gray-700"></div>
+    </div>
+  </div>
 
   <script>
-    document.getElementById("tracking-form").addEventListener("submit", async function(e) {
+    const form = document.getElementById("trackingForm");
+    const resultBox = document.getElementById("result");
+    const trackingData = document.getElementById("trackingData");
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const resi = document.getElementById("resi").value.trim();
-      const kurir = document.getElementById("kurir").value;
-      const resultEl = document.getElementById("tracking-result");
+      const carrier = document.getElementById("carrier").value;
 
-      resultEl.classList.remove("hidden");
-      resultEl.innerHTML = "🔍 Sedang mencari data...";
+      trackingData.innerHTML = "<p class='text-gray-500'>Loading...</p>";
+      resultBox.classList.remove("hidden");
 
       try {
-        const response = await fetch(`/api/tracking`, {
+        const response = await fetch("/api/tracking", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ tracking_number: resi, carrier_code: kurir })
+          body: JSON.stringify({
+            tracking_number: resi,
+            carrier_code: carrier,
+          }),
         });
 
         const data = await response.json();
 
-        if (data.data && data.data.items && data.data.items.length > 0) {
-          const info = data.data.items[0];
-          let historyHTML = "";
-          if (info.origin_info?.trackinfo) {
-            historyHTML = info.origin_info.trackinfo.map(item => `
-              <li class="mb-2">
-                <span class="font-semibold">${item.StatusDescription}</span><br>
-                <span class="text-gray-600 text-xs">${item.Details || ""}</span><br>
-                <span class="text-gray-500 text-xs">${item.Date}</span>
-              </li>
-            `).join("");
+        if (response.ok) {
+          const info = data.data || {};
+          let html = "";
+
+          if (info.items && info.items[0] && info.items[0].origin_info) {
+            const checkpoints = info.items[0].origin_info.trackinfo || [];
+
+            if (checkpoints.length > 0) {
+              html += "<ul class='list-disc pl-5 space-y-1'>";
+              checkpoints.forEach((cp) => {
+                html += `<li><span class="font-semibold">${cp.Date}:</span> ${cp.StatusDescription} (${cp.Details})</li>`;
+              });
+              html += "</ul>";
+            } else {
+              html = "<p>Belum ada data tracking.</p>";
+            }
+          } else {
+            html = "<p>Data tracking tidak ditemukan.</p>";
           }
 
-          resultEl.innerHTML = `
-            <p><strong>Resi:</strong> ${resi}</p>
-            <p><strong>Status:</strong> ${info.status}</p>
-            <p><strong>Kurir:</strong> ${kurir.toUpperCase()}</p>
-            <h3 class="mt-4 font-bold">Riwayat Pengiriman:</h3>
-            <ul class="mt-2">${historyHTML || "<li>Belum ada riwayat.</li>"}</ul>
-          `;
+          trackingData.innerHTML = html;
         } else {
-          resultEl.innerHTML = '<p class="text-red-600">❌ Resi tidak ditemukan.</p>';
+          trackingData.innerHTML =
+            "<p class='text-red-500'>Gagal mengambil data tracking.</p>";
+          console.error("Error:", data);
         }
       } catch (err) {
-        resultEl.innerHTML = '<p class="text-red-600">⚠️ Gagal mengambil data tracking.</p>';
+        trackingData.innerHTML =
+          "<p class='text-red-500'>Terjadi kesalahan server.</p>";
+        console.error(err);
       }
     });
   </script>
@@ -537,3 +575,4 @@
   </script>
 </body>
 </html>
+
