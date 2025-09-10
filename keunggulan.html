@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaring Mas Cargo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+      <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaring Mas Cargo</title>
+  <meta name="description" content="Jasa ekspor–impor terpadu: sea freight, air freight, customs/PPJK, warehouse, project cargo. Transparan, cepat, aman." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="gambar/jmc.jpg" type="x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: { 900: '#1225ab' } }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: saturate(180%) blur(8px); }
+  </style>
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-white text-slate-800">
+  <style>
+  html { scroll-behavior: smooth; }
+  .glass { backdrop-filter: saturate(180%) blur(8px); }
+
+  /* Tambahan agar semua teks default jadi biru */
+  body {
+    color: #1225ab; /* biru brand */
+  }
+  /* Untuk override teks abu-abu dari Tailwind */
+  .text-slate-600,
+  .text-slate-700,
+  .text-slate-800,
+  .text-slate-900,
+  .text-slate-500 {
+    color: #1225ab !important;
+  }
+</style>
+  <!-- Top Bar -->
+ <div class="w-full bg-blue-700 text-white text-xs md:text-sm">
+  <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap gap-2 md:gap-4 items-center justify-between">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-4">
+      <a href="https://wa.me/62811104061" target="whatsapp"><span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +62 881-1104-061</span></a>
+      <span class="hidden md:block h-4 w-px bg-blue-300/40"></span>
+      <span class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> cargojaringmas@gmail.com</span>
+    </div>
+<div class="flex items-center gap-2 opacity-90 text-xs md:text-sm">
+  <img src="https://www.mte.co.id/wp-content/uploads/2024/06/gif-gudang-putih.gif"
+       alt="Gudang"
+       class="w-20 h-10 object-contain">
+  <i data-lucide="globe-2" class="w-4 h-4"></i> Worldwide Service
+</div>
+  </div>
+</div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass bg-white/70 border-b">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="gambar/jmc.jpg" alt="Logo Jaringmas Cargo" class="h-20 w-auto" />
+        <div class="font-semibold text-slate-900">Jaring Mas Cargo</div>
+      </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="hover:text-slate-900 text-slate-600">Home</a>
+        <a href="layanan.html" class="hover:text-slate-900 text-slate-600">Layanan</a>
+        <a href="keunggulan.html" class="hover:text-slate-900 text-slate-600">Keunggulan</a>
+        <a href="alur.html" class="hover:text-slate-900 text-slate-600">Alur</a>
+        <a href="sektor.html" class="hover:text-slate-900 text-slate-600">Sektor</a>
+        <a href="sertifikasi.html" class="hover:text-slate-900 text-slate-600">Sertifikasi</a>
+        <a href="kontak.html" class="hover:text-slate-900 text-slate-600">Kontak</a>
+      </nav>
+      <!-- CTA -->
+      <a href="#kontak" class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-slate-900 text-white px-4 py-2 text-sm font-medium">Konsultasi Gratis <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden inline-flex items-center rounded-md p-2 border">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-2 px-4 pb-4 text-sm bg-white border-t">
+      <a href="index.html" class="py-1">Home</a>
+      <a href="layanan.html" class="py-1">Layanan</a>
+      <a href="keunggulan.html" class="py-1">Keunggulan</a>
+      <a href="alur.html" class="py-1">Alur</a>
+      <a href="sektor.html" class="py-1">Sektor</a>
+      <a href="sertifikasi.html" class="py-1">Sertifikasi</a>
+      <a href="kontak.html" class="py-1">Kontak</a>
+      <a href="keunggulan.html" class="mt-2 inline-flex items-center justify-center rounded-2xl bg-slate-900 text-white px-4 py-2 text-sm font-medium">Konsultasi Gratis</a>
+    </div>
+  </header>
+    <!-- Support Pembelian E-Commerce China -->
+<section class="mx-auto max-w-7xl px-4 py-14 grid md:grid-cols-2 gap-10 items-center">
+  <!-- Teks -->
+  <div>
+    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-700 leading-snug">
+      SUPPORT PEMBELIAN <br /> E-COMMERCE CHINA
+    </h2>
+    <p class="mt-4 text-slate-600 text-base md:text-lg">
+    <p class="text-slate-600 text-sm mb-4">
+    yang masih bingung belanja di marketplace china bisa kita bantu pembelian barang, negosiasi sama seller, bantu pembelian & pembayaran, serta pengiriman barang sampai rumah!
+    </p>
+    <p class="text-slate-600 text-sm mb-4">
+    ____________________________________
+  </p>
+    <a href="https://wa.me/62811104061" target="_blank"><p class="text-slate-600 text-sm mb-4">
+    INFO LENGKAPNYA BISA WA KLIK DISINI!
+    </p>
+  </a>
+  </div>
+
+  <!-- Logo E-Commerce -->
+  <div class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center">
+    <img src="gambar/marketplace.png" 
+         alt="support pembelian" class="h-25 object-contain">
+  </div>
+</section>
+  <!-- Keunggulan -->
+  <section id="kelebihan" class="bg-slate-50">
+    <div class="mx-auto max-w-7xl px-4 py-14">
+      <h2 class="text-2xl md:text-3xl font-bold">Mengapa Jaring Mas Cargo?</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-3xl border p-6">
+          <div class="font-semibold">Harga Transparan & Kompetitif</div>
+          <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> Breakdown biaya yang jelas, tanpa biaya tersembunyi</li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> Opsi rute dan lead time disandingkan</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border p-6">
+          <div class="font-semibold">Kepatuhan & Mitigasi Risiko</div>
+          <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> Review HS Code & regulasi tujuan</li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> Asuransi kargo dan SOP klaim</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border p-6">
+          <div class="font-semibold">Operasional Andal</div>
+          <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> Monitoring milestone real‑time</li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> SLA dokumentasi & respon cepat</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border p-6">
+          <div class="font-semibold">Jaringan Global</div>
+          <ul class="mt-3 space-y-2 text-slate-600 text-sm">
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> Mitra di >120 negara</li>
+            <li class="flex gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5"></i> Konsolidasi mingguan utama</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+<footer class="bg-blue-700 text-white">
+  <div class="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-3 gap-10 text-sm">
+
+    <!-- Kolom 1: Deskripsi -->
+    <div>
+      <img src="gambar/jmc.jpg" alt="Logo JMC" class="h-20 mb-4">
+      <p class="leading-relaxed text-white/80">
+        Jaring Mas Cargo adalah solusi terbaik untuk kebutuhan jasa 
+        <span class="font-semibold">Import barang di Jaring mas cargo, selain mudah, cepat dan amanah, yang pasti kami juga memberikan biaya yang terjangkau.
+      </p>
+      <p class="mt-3 text-white/80">
+        Cukup anda <span class="font-semibold"> menginfokan data barang yang akan anda kirim/beli dan barang akan kami antar hingga depan rumah anda.
+      </p>
+      <p class="mt-3 text-white/80">
+        Cari tau <span class="font-semibold">
+        selengkapnya bisa dengan mengunjungi web kami, dengan cara klik link di bio. Atau anda bisa menghubungi saya via whatsapp : +62 881-1104-061
+      </p>
+    </div>
+
+    <!-- Kolom 2: Office & Warehouse -->
+    <div class="space-y-4">
+      <div>
+        <h3 class="font-semibold mb-2 flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4"></i> OFFICE JAKARTA TIMUR
+        </h3>
+        <p class="text-white/80">
+          GEDUNG GRAHA MIR LT.6 ZONA A1 Jl.Oemuda No.09 Rawamangun Jakarta Timur
+        </p>
+        <p class="text-white/80 mt-1">Jam Operasional 09.00 – 17.00 WIB</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2 flex items-center gap-2">
+          <i data-lucide="package" class="w-4 h-4"></i> China Warehouse
+        </h3>
+        <ul class="text-white/80 space-y-1 ml-2">
+          <li>• Guangzhou</li>
+          <li>• Yiwu</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2 flex items-center gap-2">
+          <i data-lucide="link" class="w-4 h-4"></i> QUICK LINK
+        </h3>
+        <ul class="text-white/80 space-y-1 ml-2">
+          <li>Syarat dan Ketentuan</li>
+          <li>Jasa Transfer IDR - RMB YUAN</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Kolom 3: Kontak -->
+    <div class="space-y-2">
+      <a href="https://wa.me/62811104061" target="whatsapp"><p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +62 881-1104-061 (Marketing JMC)</p></a>
+      <a href="https://wa.me/6285772772886" target="whatsapp"><p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +62 857-7277-2886 (Admin Pembelian)</p></a>
+      <a href=" https://www.instagram.com/jaringmascargo/" target="instagram"><p class="flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i> jaringmascargo</p></a>
+      <p class="flex items-center gap-2"><i data-lucide="facebook" class="w-4 h-4"></i> jaringmascargo</p>
+      <a href="mailto:cargojaringmas@gmail.com"><p class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> cargojaringmas@gmail.com</p></a>
+    </div>
+
+  </div>
+  <div class="text-center text-xs text-white/60 py-6 border-t border-white/20">
+    © <span id="year"></span> Jaring Mas Cargo. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // Auto year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+ <script>
+    // Icons
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide && lucide.createIcons) lucide.createIcons();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
